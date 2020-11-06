@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstdio>
+#include "guessing.h"
 
 int main() 
 {
@@ -31,6 +32,8 @@ int main()
 
 	// adding
 	std::cout << "youll be" << count + 1 << "next year" << std::endl;
+
+	set_max_guess();
 
 
 

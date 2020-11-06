@@ -3,41 +3,59 @@
 #include <ctime>
 #include "guessing.h"
 
-int set_max_guess() {
-	int max_num = 0;
-
-	std::cout << "Whats the max number to guess up to?" << std::endl;
-
-	std::cin >> max_num;
-
-	std::cout << "Max number set to: " << max_num << std::endl;
-
-	std::srand(std::time(0));
-	int max_guess = rand() % max_num + 1;
-
-	std::cout << "cpu generated number : " << max_guess << std::endl;
-	return 0;
+// set a random number between 0 and a defined param int
+int set_random_number(int max_value)
+{
+	return rand() % (max_value + 1);
 }
 
-int guess_between_two() {
-	int highest_num = 0;
-	int lowest_num = 0;
+// compares player guess to a cpus correct answer
+void check_player_answer(int cpu_answer)
+{
+	bool guessing = true;
+	int number_guessed = 0;
+	int attempts = 0;
 
+	while (guessing)
+	{
+		std::cout << "What is your guess?\n";
+		std::cin >> number_guessed;
+		std::cin.clear();
 
-	
+		// win message/ correct guess
+		if (number_guessed == cpu_answer)
+		{
+			std::cout << "Im surpised! You guessed the right number!\n";
+			std::cout << "The number was: " << cpu_answer << std::endl;
+			
+			guessing = false;
+		}
+		// less than correct number check
+		else if (number_guessed < cpu_answer)
+		{
+			attempts++;
+			std::cout << "Wrong! Number was too low!\n";
+		}
+		// less than correct number check
+		else if (number_guessed > cpu_answer)
+		{
+			attempts++;
+			std::cout << "Wrong! Number was too high!\n";
+		}
+		// check to see if max attempts have been reached
+		if (attempts == 3)
+		{
+			std::cout << "You exceeded the given amount of tries to guess correctly\n";
+			std::cout << "The number i was thinking of was: " << cpu_answer << std::endl;
+			std::cout << "Goodbye\n";
 
-	std::cout << "Enter the highest number to guess from" << std::endl;
-	std::cin >> highest_num;
-	
-	std::cout << "Enter the lowest number to guess from" << std::endl;
-	std::cin >> lowest_num;
+			break;
+		}		
+	}
+}
 
-	std::srand(std::time(0));
-	int range = highest_num - lowest_num;
-	int random_guess = rand() % lowest_num + range;
-
-
-	std::cout << "cpu generated a number between: " << highest_num << " and " << lowest_num << "\n the number generated was: " << random_guess << std::endl;
-
-	return 0;
+// seeds the random generator using time
+void seedRandom()
+{
+	return std::srand(std::time(0));
 }
