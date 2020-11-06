@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NumberGuessingGame", "Numbe
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Arrays", "Arrays\Arrays.vcxproj", "{6984CF10-1339-47EE-88D1-59300F78C790}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PointersAndDynamicMemory", "PointersAndDynamicMemory\PointersAndDynamicMemory.vcxproj", "{976BB38C-4CE8-4EE8-9DE1-5313A548ECCC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,6 +43,14 @@ Global
 		{6984CF10-1339-47EE-88D1-59300F78C790}.Release|x64.Build.0 = Release|x64
 		{6984CF10-1339-47EE-88D1-59300F78C790}.Release|x86.ActiveCfg = Release|Win32
 		{6984CF10-1339-47EE-88D1-59300F78C790}.Release|x86.Build.0 = Release|Win32
+		{976BB38C-4CE8-4EE8-9DE1-5313A548ECCC}.Debug|x64.ActiveCfg = Debug|x64
+		{976BB38C-4CE8-4EE8-9DE1-5313A548ECCC}.Debug|x64.Build.0 = Debug|x64
+		{976BB38C-4CE8-4EE8-9DE1-5313A548ECCC}.Debug|x86.ActiveCfg = Debug|Win32
+		{976BB38C-4CE8-4EE8-9DE1-5313A548ECCC}.Debug|x86.Build.0 = Debug|Win32
+		{976BB38C-4CE8-4EE8-9DE1-5313A548ECCC}.Release|x64.ActiveCfg = Release|x64
+		{976BB38C-4CE8-4EE8-9DE1-5313A548ECCC}.Release|x64.Build.0 = Release|x64
+		{976BB38C-4CE8-4EE8-9DE1-5313A548ECCC}.Release|x86.ActiveCfg = Release|Win32
+		{976BB38C-4CE8-4EE8-9DE1-5313A548ECCC}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
