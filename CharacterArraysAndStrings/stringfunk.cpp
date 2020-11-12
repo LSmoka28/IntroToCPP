@@ -10,24 +10,35 @@ using std::string;
 
 void getFavColor()
 {
-	char input[50];
+	char inputColor[50] = "";
 
 	cout << "What is your favortie color?" << endl;
 
-	cin.clear();
+	cin.getline(inputColor, 20);
 
-	cin.getline(input, 20);
-
-	if (strcmp(input, "orange") == 0)
+	if (strcmp(inputColor, "orange") == 0)
 	{
 		cout << "Orange is also a fruit" << endl;
 	}
-	if (strcmp(input, "red") == 0)
+	else if (strcmp(inputColor, "red") == 0)
 	{
 		cout << "Red? Like the color of roses?" << endl;
 	}
 	else
 	{
 		cout << "I've never heard of that color before." << endl;
+	}
+}
+
+// upper all the letters
+void toUpper(char *str, size_t size) 
+{
+	for (size_t i = 0; i < size; i++)
+	{
+		//check to see if already capitalized
+		if (str[i] > 96 && str[i] < 123)
+		{
+			str[i] = str[i] - 32;
+		}
 	}
 }
