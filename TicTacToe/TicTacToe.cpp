@@ -2,10 +2,21 @@
 //
 
 #include <iostream>
+#include "gameboard.h"
+#include "playeractions.h"
+
 
 int main()
 {
-    std::cout << "Hello World!\n";
+
+
+
+    std::cout << "----Tac Tac Toe!----\n\n\n";
+
+    displayBoard();
+
+    return 0;
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
