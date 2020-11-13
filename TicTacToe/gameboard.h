@@ -16,6 +16,7 @@ void displayBoard();
 int checkRowMatch();
 int checkColumnMatch();
 int checkDiagonalMatch();
+//int isDraw();
 
 // declare the gameArray
 // - the name (and other info, like the type)

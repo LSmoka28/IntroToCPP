@@ -71,7 +71,7 @@ int checkColumnMatch()
 	return 0;
 }
 
-// checks for win by diagonal
+// checks for win by both diagonal directions 
 int checkDiagonalMatch()
 {	
 	if (gameArray[0][0] == 'X' && gameArray[1][1] == 'X' && gameArray[2][2] == 'X')
@@ -93,3 +93,23 @@ int checkDiagonalMatch()
 
 	return 0;
 }
+
+//int isDraw()
+//{
+//	for (int i = 0; i < 3; i++)
+//	{
+//		for (int j = 0; j < 3; j++)
+//		{
+//			if ((gameArray[i][j] == 'X') && gameArray[i][j] == 'O')
+//			{
+//				
+//				return 1;
+//			}
+//			else
+//			{
+//				return 0;
+//			}
+//		}
+//	}
+//	return 0;
+//}

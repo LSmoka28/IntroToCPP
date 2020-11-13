@@ -9,5 +9,3 @@ void checkTurn();
 // check for game over
 bool isGameOver();
 
-// see if player wants to start over
-void replayGame();
