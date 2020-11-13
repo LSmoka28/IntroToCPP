@@ -12,7 +12,7 @@ int main()
 
     std::cout << "----Tac Tac Toe!----\n\n";
     
-    while (!playerHasWon) 
+    while (!isGameOver()) 
     {
         checkTurn();
         displayBoard();        
@@ -20,6 +20,7 @@ int main()
         
     }
 
+    std::cout << "Thank you for playing!" << std::endl;
 
     
 

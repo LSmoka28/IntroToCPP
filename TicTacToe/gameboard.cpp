@@ -35,47 +35,61 @@ void displayBoard()
 
 
 // checks for win by rows
-void checkRowMatch()
+int checkRowMatch()
 {
 	for (int i = 0; i < 3; i++)
 	{
-		if (gameArray[i][0] && gameArray[i][1] && gameArray[i][2] == 'X')
-		{
-			cout << "Player One has matched a row!\nPlayer one is the winner!" << endl;
+		if (gameArray[i][0] == 'X' && gameArray[i][1] == 'X' && gameArray[i][2] == 'X')
+		{		
+			return 1;
 		}
-		if (gameArray[i][0] && gameArray[i][1] && gameArray[i][2] == 'O')
+		if (gameArray[i][0] == 'O' && gameArray[i][1] == 'O' && gameArray[i][2] == 'O')
 		{
-			cout << "Player Two has matched a row!\nPlayer two is the winner!" << endl;
+			return 2;
 		}
 	}
+	return 0;
 }
 
 // checks for win by column
-void checkColumnMatch()
+int checkColumnMatch()
 {
 	for (int i = 0; i < 3; i++)
 	{
-		if (gameArray[0][i] && gameArray[1][i] && gameArray[2][i] == 'X')
+		if (gameArray[0][i] == 'X' && gameArray[1][i] == 'X' && gameArray[2][i] == 'X')
 		{
-			cout << "Player One has matched a column!\nPlayer one is the winner!" << endl;
+			
+			return 1;
 		}
-		if (gameArray[0][i] && gameArray[1][i] && gameArray[2][i] == 'O')
+		if (gameArray[0][i] == 'O' && gameArray[1][i] == 'O' && gameArray[2][i] == 'O')
 		{
-			cout << "Player Two has matched a column!\nPlayer two is the winner!" << endl;
+
+			return 2;
 		}
+		
 	}
+	return 0;
 }
 
 // checks for win by diagonal
-void checkDiagonalMatch()
+int checkDiagonalMatch()
 {	
-	if (gameArray[0][0] && gameArray[1][1] && gameArray[2][2] == 'X')
+	if (gameArray[0][0] == 'X' && gameArray[1][1] == 'X' && gameArray[2][2] == 'X')
 	{
-		cout << "Player One has matched a diagonally!\nPlayer one is the winner!" << endl;
+		return 1;
 	}
-	if (gameArray[0][2] && gameArray[1][1] && gameArray[2][0] == 'O')
+	if (gameArray[0][2] == 'X' && gameArray[1][1] == 'X' && gameArray[2][0] == 'X')
 	{
-		cout << "Player Two has matched diagonally!\nPlayer two is the winner!" << endl;
+		return 1;
 	}
-	
+	if (gameArray[0][0] == 'O' && gameArray[1][1] == 'O' && gameArray[2][2] == 'O')
+	{
+		return 2;
+	}
+	if (gameArray[0][2] == 'O' && gameArray[1][1] == 'O' && gameArray[2][0] == 'O')
+	{
+		return 2;
+	}
+
+	return 0;
 }

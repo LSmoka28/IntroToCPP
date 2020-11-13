@@ -14,6 +14,8 @@ int rowOnBoard = 0;
 int columnOnBoard = 0;
 char player = 'X';
 
+bool playerHasWon = false;
+
 
 
 
@@ -115,3 +117,25 @@ void getPlayerInput()
 
 }
 
+
+// check for game over
+bool isGameOver()
+{
+	if (checkRowMatch() == 1 || checkColumnMatch() == 1 || checkDiagonalMatch() == 1) 
+	{
+		cout << "Player one is the winner!" << endl;
+		return true;
+	}
+	if (checkRowMatch() == 2 || checkColumnMatch() == 2 || checkDiagonalMatch() == 2)
+	{
+		cout << "Player two is the winner!" << endl;
+		return true;
+	}
+	return false;
+}
+
+// see if player wants to start over
+void replayGame()
+{
+	// enter code here
+}
