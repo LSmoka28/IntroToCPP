@@ -8,12 +8,20 @@
 
 int main()
 {
+    bool playerHasWon = false;
+
+    std::cout << "----Tac Tac Toe!----\n\n";
+    
+    while (!playerHasWon) 
+    {
+        checkTurn();
+        displayBoard();        
+        getPlayerInput();
+        
+    }
 
 
-
-    std::cout << "----Tac Tac Toe!----\n\n\n";
-
-    displayBoard();
+    
 
     return 0;
 

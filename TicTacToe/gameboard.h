@@ -12,3 +12,12 @@
 //     |     |      
 void displayBoard();
 
+
+void checkRowMatch();
+void checkColumnMatch();
+void checkDiagonalMatch();
+
+// declare the gameArray
+// - the name (and other info, like the type)
+extern char gameArray[3][3];
+
