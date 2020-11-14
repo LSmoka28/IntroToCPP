@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstring>
+#include <string>
 #include "playeractions.h"
 #include "gameboard.h"
 
@@ -10,10 +11,12 @@ using std::cin;
 // variable to count amount of turns
 int moveCounter = 0;
 
-
+// variables to define user selection, row and column numbers for gameboard
 int selection = 0;
 int rowOnBoard = 0;
 int columnOnBoard = 0;
+
+// sets starting player as X/ Player one
 char player = 'X';
 
 // function to show whos turn it is
@@ -27,37 +30,37 @@ void checkTurn()
 	{
 		cout << "\nPlayer Two's turn (O)\n" << endl;
 	}
-
 }
 
 
 // have player type 1-9 on the players turn
 void getPlayerInput()
 {
-	selection = 0;
 
-	cin.clear();
-	cin.ignore(10000, '\n');
+	
+
+
+	// sets selection to zero at start
+	selection = 0;
 
 	// get input from players
 	cout << "\nSelect the position to place your token (1-9)" << endl;
 	cin >> selection;
 	cin.clear();
+	cin.ignore(10000, '\n');
 
-	// if selection invalid, ask again
+	// if selection invalid, show board and ask again
 	if (selection > 9 || selection <= 0)
-	{
-		cin.clear();
-
-		cout << "\nYou entered in an invalid selection\nPlease select a valid spot (1-9)\n" << endl;
+	{		
+		cout << "\nYou entered an invalid selection\nPlease select a valid spot (1-9)\n" << endl;
 
 		displayBoard();
 
 		getPlayerInput();
-
-		cin.clear();
+		return;
 	}
 	
+	// cases for user inputs 1-9
 	// accept inputs for numbers 1-9 to place at the right position on board
 	switch (selection)
 	{
@@ -93,13 +96,24 @@ void getPlayerInput()
 		break;
 	}
 	
-	cin.clear();
-	char input = ' ';
 	cout << "You selected spot [" << selection << "]. Is this correct?" << endl;
-	cin >> input;
-	
+	// confirm player input
 
-	if (input == 'y')
+
+	char input = ' ';
+	cin >> input;
+	cin.clear();
+	cin.ignore(10000, '\n');
+
+	
+	if (input == '0')
+	{
+		cout << "You didnt enter anything into the console" << endl;
+		checkTurn();
+		getPlayerInput();
+	}
+
+	if (input == 'y' || input == 'Y')
 	{
 		if (player == 'X' && gameArray[rowOnBoard][columnOnBoard] != 'X' && gameArray[rowOnBoard][columnOnBoard] != 'O')
 		{
@@ -126,29 +140,32 @@ void getPlayerInput()
 		getPlayerInput();
 	}
 
+	// check for matching after 
 	checkRowMatch();
 	checkColumnMatch();
 	checkDiagonalMatch();
 	
 }
 
-
-// check for game over
+// check for game over for draw and wins
 bool isGameOver()
 {
 	if (checkRowMatch() == 1 || checkColumnMatch() == 1 || checkDiagonalMatch() == 1) 
 	{
-		cout << "Player one is the winner!" << endl;
+		displayBoard();
+		cout << "\nPlayer one has matched 3 tokens together! Player one is the winner!\n" << endl;
 		return true;
 	}
 	if (checkRowMatch() == 2 || checkColumnMatch() == 2 || checkDiagonalMatch() == 2)
 	{
-		cout << "Player two is the winner!" << endl;
+		displayBoard();
+		cout << "\nPlayer two has matched 3 tokens together!Player two is the winner!\n" << endl;
 		return true;
 	}
 	if (moveCounter == 9)
 	{
-		cout << "Game is a draw! Try again another time" << endl;
+		displayBoard();
+		cout << "\nGame is a draw! There is no winner\nTry again another time\n" << endl;
 		return true;
 	}
 	return false;

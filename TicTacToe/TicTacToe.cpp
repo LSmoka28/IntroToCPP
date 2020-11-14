@@ -22,8 +22,7 @@ int main()
 
     std::cout << "Thank you for playing!" << std::endl;
 
-    
-
+   
     return 0;
 
 }

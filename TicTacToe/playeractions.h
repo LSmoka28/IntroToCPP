@@ -1,9 +1,9 @@
 #pragma once
 
-// have player type X or O depending on the players turn
+// have player type 1-9 for their turn
 void getPlayerInput();
 
-//check players turn
+// displays player turn
 void checkTurn();
 
 // check for game over
