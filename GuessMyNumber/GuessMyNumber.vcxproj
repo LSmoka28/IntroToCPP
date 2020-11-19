@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{a2e95c0a-2a90-4459-976f-f36e0186ce64}</ProjectGuid>
-    <RootNamespace>BattleArena</RootNamespace>
+    <ProjectGuid>{642c38a8-ff64-4869-b399-62401232b495}</ProjectGuid>
+    <RootNamespace>GuessMyNumber</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,15 +139,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="BattleArena.cpp" />
-    <ClCompile Include="heroes.cpp" />
-    <ClCompile Include="people.cpp" />
-    <ClCompile Include="villains.cpp" />
+    <ClCompile Include="cpuguess.cpp" />
+    <ClCompile Include="GuessMyNumber.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="heroes.h" />
-    <ClInclude Include="people.h" />
-    <ClInclude Include="villains.h" />
+    <ClInclude Include="cpuguess.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

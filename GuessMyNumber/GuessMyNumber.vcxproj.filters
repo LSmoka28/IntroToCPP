@@ -15,27 +15,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="BattleArena.cpp">
+    <ClCompile Include="GuessMyNumber.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="heroes.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="people.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="villains.cpp">
+    <ClCompile Include="cpuguess.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="heroes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="people.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="villains.h">
+    <ClInclude Include="cpuguess.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

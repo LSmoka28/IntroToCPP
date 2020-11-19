@@ -1,20 +1,11 @@
-// BattleArena.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// GuessMyNumber.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
 #include <iostream>
-#include "heroes.h"
-#include "villains.h"
-#include "people.h"
 
 int main()
 {
-    
-
-
-
-
-    std::cout << "Hello World!\n";
-
+    std::cout << "Think of a number between 1 and 100\n";
 
 
 
