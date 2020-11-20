@@ -6,8 +6,10 @@
 #include "rand.h"
 
 
+
 int main()
 {
+
 	// HEROES
 	character hero[5] =
 	{
@@ -38,7 +40,7 @@ int main()
 		std::cout << "\Match Begin!\n";
 		for (int i = 0; i < 5; i++)
 		{
-			
+			// set random values
 			int heroAttackValue = setRandomAttackValue(hero[i].minDmg, hero[i].maxDmg);
 			int villainAttackValue = setRandomAttackValue(villain[i].minDmg, villain[i].maxDmg);
 			int randomHero = setRandomIndex(5);
@@ -49,7 +51,9 @@ int main()
 			std::cout << "\nRound " << roundCount << std::endl;
 
 			//hero attack
-			std::cout << "-" << hero[i].name << " attacks " << villain[randomHero].name << " with " << hero[i].nameOfAttack << "\nand inflicts " << heroAttackValue << " damage" << std::endl;
+			std::cout << "-" << hero[i].name;
+			
+			std::cout << " attacks " << villain[randomHero].name << " with " << hero[i].nameOfAttack << "\nand inflicts " << heroAttackValue << " damage" << std::endl;
 			villain[randomHero].health -= heroAttackValue;
 			std::cout << villain[randomHero].name << " has " << villain[randomHero].health << " health left\n\n";
 
@@ -63,13 +67,6 @@ int main()
 
 		gameRunning = false;
 	}
-
-    
-
-
-
-
-
 
 }
 
