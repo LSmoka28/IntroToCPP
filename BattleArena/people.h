@@ -11,6 +11,9 @@ public:
 	int minDmg = 0;
 	int maxDmg = 0;
 	int health = 100;
+	bool alive = true;
+
+
 
 };
 
