@@ -27,6 +27,9 @@
     <ClCompile Include="villains.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="rand.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="heroes.h">
@@ -36,6 +39,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="villains.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rand.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

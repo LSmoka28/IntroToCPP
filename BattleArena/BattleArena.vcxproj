@@ -142,11 +142,13 @@
     <ClCompile Include="BattleArena.cpp" />
     <ClCompile Include="heroes.cpp" />
     <ClCompile Include="people.cpp" />
+    <ClCompile Include="rand.cpp" />
     <ClCompile Include="villains.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="heroes.h" />
     <ClInclude Include="people.h" />
+    <ClInclude Include="rand.h" />
     <ClInclude Include="villains.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

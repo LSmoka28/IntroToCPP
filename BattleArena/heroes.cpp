@@ -1,6 +1,7 @@
 #include "heroes.h"
 
 
+
 hero::hero()
 {
 	numOfHeroes = 0;
@@ -32,3 +33,4 @@ void hero::addHero(character &newHero)
 	superhero[numOfHeroes] = newHero;
 	++numOfHeroes;
 }
+
