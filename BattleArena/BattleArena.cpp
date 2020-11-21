@@ -60,7 +60,6 @@ int main()
 	int roundCount = 1;
 	size_t heroArraySize = 5;
 	size_t villainArraySize = 5;
-	size_t size = 5;
 	size_t capacity = 5;
 
 	std::cout << "Battle Arena!\n";
@@ -75,7 +74,7 @@ int main()
 			int villainAttackValue = setRandomAttackValue(villain[i].minDmg, villain[i].maxDmg);
 			int randomHero = setRandomIndex(heroArraySize);
 			int randomVillain = setRandomIndex(villainArraySize);
-			int randomCharacter = setRandomIndex(size);
+			
 
 			// round start
 			std::cout << "\nRound " << roundCount << std::endl;
@@ -92,7 +91,6 @@ int main()
 
 				sort(villain, villainArraySize);
 				sort(hero, heroArraySize);
-				--size;
 				--villainArraySize;
 
 				if (villain[0].health == 0)
@@ -115,7 +113,6 @@ int main()
 				//sort both arrays
 				sort(hero, heroArraySize);
 				sort(villain, villainArraySize);
-				--size;
 				--heroArraySize;
 				if (hero[0].health == 0)
 				{
@@ -126,15 +123,10 @@ int main()
 
 			roundCount++;
 
-
 			std::cout << "Press any key to continue rounds"<< std::endl;
 			char input = ' ';
 			std::cin >> input;
-
-			
-			
-
-			
+	
 		}
 	}
 	gameRunning = false;
