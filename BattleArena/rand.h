@@ -2,7 +2,7 @@
 
 int setRandomAttackValue(int minValue, int maxValue);
 
-int setRandomIndex(int maxPeople);
+int setRandomIndex(size_t maxPeople);
 
 
 void seedRandom();
